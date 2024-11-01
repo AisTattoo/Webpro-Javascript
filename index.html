@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh DOM Sederhana</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #judul {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #tombolUbah {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        #tombolUbah:hover {
+            background-color: #0056b3;
+        }
+
+        #pesan {
+            font-size: 18px;
+            color: #555;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="judul">Selamat Datang di Halaman Ini! Silahkan Klik tombol untuk mendapatkan password</h1>
+        <button id="tombolUbah">Klik Disini</button>
+        <p id="pesan">Password</p>
+    </div>
+
+    <script>
+ 
+        const tombol = document.getElementById("tombolUbah");
+        const paragraf = document.getElementById("pesan");
+
+        tombol.addEventListener("click", () => {
+
+            paragraf.textContent = "Passwordnya : Informatik123";
+            paragraf.style.color = "green";  
+        });
+    </script>
+</body>
+</html>
